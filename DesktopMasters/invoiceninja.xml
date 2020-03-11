@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>invoiceninja</Name>
-  <Repository>anojht/invoiceninja</Repository>
+  <Repository>DesktopMasters/invoiceninja</Repository>
   <Registry>https://hub.docker.com/r/anojht/invoiceninja</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
