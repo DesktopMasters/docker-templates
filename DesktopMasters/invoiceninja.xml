@@ -27,15 +27,23 @@
   </Networking>
   <Data>
     <Volume>
+      <HostDir>/mnt/user/appdata/invoiceninja/storage</HostDir>
       <ContainerDir>/var/www/app/storage</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
+      <HostDir>/mnt/user/appdata/invoiceninja/logo</HostDir>
       <ContainerDir>/var/www/app/public/logo</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
+      <HostDir>/mnt/user/appdata/invoiceninja/config/.env</HostDir>
       <ContainerDir>/var/www/app/.env</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/invoiceninja/etc/hosts</HostDir>
+      <ContainerDir>/etc/hosts</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
