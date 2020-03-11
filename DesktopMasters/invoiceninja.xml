@@ -106,9 +106,6 @@
       <Name>PHANTOMJS_SECRET</Name>
     </Variable>
     <Variable>
-      <Name>PHANTOMJS_BIN_PATH</Name>
-    </Variable>
-    <Variable>
       <Name>API_SECRET</Name>
     </Variable>
     <Variable>
@@ -142,7 +139,6 @@
   <Config Name="HTTP Port" Target="80" Default="8000" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false"/>
   <Config Name="HTTPS Port" Target="443" Default="8443" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false"/>
   <Config Name="PHANTOMJS_SECRET" Target="PHANTOMJS_SECRET" Default="" Description="Container Variable: PHANTOMJS_SECRET" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="PHANTOMJS_BIN_PATH" Target="PHANTOMJS_BIN_PATH" Default="/usr/local/bin/phantomjs" Description="Container Variable: PHANTOMJS_BIN_PATH" Type="Variable" Display="always" Required="false" Mask="false"/>
 	<Config Name="API_SECRET" Target="API_SECRET" Default="RandomStuffHere" Description="Container Variable: API_SECRET" Type="Variable" Display="always" Required="false" Mask="false"/>
 	<Config Name="GOOGLE_MAPS_ENABLED" Target="GOOGLE_MAPS_ENABLED" Default="false" Description="Container Variable: GOOGLE_MAPS_ENABLED" Type="Variable" Display="always" Required="false" Mask="false"/>
 	<Config Name="GOOGLE_MAPS_API_KEY" Target="GOOGLE_MAPS_API_KEY" Default="" Description="Container Variable: GOOGLE_MAPS_API_KEY" Type="Variable" Display="always" Required="false" Mask="false"/>
