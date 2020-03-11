@@ -133,12 +133,12 @@
   <Config Name="MAIL_PASSWORD" Target="MAIL_PASSWORD" Default="SUPERSECRETEMAILPASSWORD" Description="Container Variable: MAIL_PASSWORD" Type="Variable" Display="always" Required="false" Mask="true"/>
   <Config Name="HTTP Port" Target="80" Default="8000" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false"/>
   <Config Name="HTTPS Port" Target="443" Default="8443" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false"/>
-  <Config Name="PHANTOMJS_SECRET" Target="PHANTOMJS_SECRET" Default="" Description="Container Variable: PHANTOMJS_SECRET" Type="Variable" Display="always" Required="false" Mask="true"/>
-  <Config Name="PHANTOMJS_BIN_PATH" Target="PHANTOMJS_BIN_PATH" Default="/usr/local/bin/phantomjs" Description="Container Variable: PHANTOMJS_BIN_PATH" Type="Variable" Display="always" Required="false" Mask="true"/>
-	<Config Name="API_SECRET" Target="API_SECRET" Default="RandomStuffHere" Description="Container Variable: API_SECRET" Type="Variable" Display="always" Required="false" Mask="true"/>
-	<Config Name="GOOGLE_MAPS_ENABLED" Target="GOOGLE_MAPS_ENABLED" Default="false" Description="Container Variable: GOOGLE_MAPS_ENABLED" Type="Variable" Display="always" Required="false" Mask="true"/>
-	<Config Name="GOOGLE_MAPS_API_KEY" Target="GOOGLE_MAPS_API_KEY" Default="" Description="Container Variable: GOOGLE_MAPS_API_KEY" Type="Variable" Display="always" Required="false" Mask="true"/>
-	<Config Name="QUEUE_DRIVER" Target="QUEUE_DRIVER" Default="database" Description="Container Variable: QUEUE_DRIVER" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="PHANTOMJS_SECRET" Target="PHANTOMJS_SECRET" Default="" Description="Container Variable: PHANTOMJS_SECRET" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PHANTOMJS_BIN_PATH" Target="PHANTOMJS_BIN_PATH" Default="/usr/local/bin/phantomjs" Description="Container Variable: PHANTOMJS_BIN_PATH" Type="Variable" Display="always" Required="false" Mask="false"/>
+	<Config Name="API_SECRET" Target="API_SECRET" Default="RandomStuffHere" Description="Container Variable: API_SECRET" Type="Variable" Display="always" Required="false" Mask="false"/>
+	<Config Name="GOOGLE_MAPS_ENABLED" Target="GOOGLE_MAPS_ENABLED" Default="false" Description="Container Variable: GOOGLE_MAPS_ENABLED" Type="Variable" Display="always" Required="false" Mask="false"/>
+	<Config Name="GOOGLE_MAPS_API_KEY" Target="GOOGLE_MAPS_API_KEY" Default="" Description="Container Variable: GOOGLE_MAPS_API_KEY" Type="Variable" Display="always" Required="false" Mask="false"/>
+	<Config Name="QUEUE_DRIVER" Target="QUEUE_DRIVER" Default="database" Description="Container Variable: QUEUE_DRIVER" Type="Variable" Display="always" Required="false" Mask="false"/>
 	<Config Name="Storage" Target="/var/www/app/storage" Default="/mnt/user/appdata/invoiceninja/storage" Mode="rw" Description="Container Path: /var/www/app/storage" Type="Path" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Logo" Target="/var/www/app/public/logo" Default="/mnt/user/appdata/invoiceninja/logo" Mode="rw" Description="Container Path: /var/www/app/public/logo" Type="Path" Display="advanced" Required="false" Mask="false"/>
   <Config Name=".env" Target="/var/www/app/.env" Default="/mnt/user/appdata/invoiceninja/config/.env" Mode="rw" Description="Container Path: /var/www/app/.env" Type="Path" Display="advanced" Required="false" Mask="false"/>
