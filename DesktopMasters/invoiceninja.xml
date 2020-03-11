@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>invoiceninja</Name>
+  <Repository>anojht/invoiceninja</Repository>
+  <Registry>https://hub.docker.com/r/anojht/invoiceninja</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/anojht/invoiceninja</Support>
+  <Project>https://www.invoiceninja.com/</Project>
+  <Overview> An open-source invoicing and time-tracking app built with Laravel https://www.invoiceninja.com  </Overview>
+  <Category>Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/DesktopMasters/docker-templates/DesktopMasters/invoiceninja.xml</TemplateURL>
+	<Icon>https://raw.githubusercontent.com/DesktopMasters/docker-templates/DesktopMasters/img/invoiceninja.png</Icon>
+  <Description> An open-source invoicing and time-tracking app built with Laravel https://www.invoiceninja.com  </Description>
+  <Networking>
+    <Publish>
+      <Port>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <ContainerDir>/var/www/app/storage</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <ContainerDir>/var/www/app/public/logo</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <ContainerDir>/var/www/app/.env</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Name>APP_ENV</Name>
+    </Variable>
+    <Variable>
+      <Name>APP_DEBUG</Name>
+    </Variable>
+    <Variable>
+      <Name>DB_TYPE</Name>
+    </Variable>
+    <Variable>
+      <Name>DB_STRICT</Name>
+    </Variable>
+    <Variable>
+      <Name>DB_HOST</Name>
+    </Variable>
+    <Variable>
+      <Name>DB_DATABASE</Name>
+    </Variable>
+    <Variable>
+      <Name>DB_USERNAME</Name>
+    </Variable>
+    <Variable>
+      <Name>DB_PASSWORD</Name>
+    </Variable>
+    <Variable>
+      <Name>APP_URL</Name>
+    </Variable>
+    <Variable>
+      <Name>APP_KEY</Name>
+    </Variable>
+    <Variable>
+      <Name>MAIL_DRIVER</Name>
+    </Variable>
+    <Variable>
+      <Name>MAIL_PORT</Name>
+    </Variable>
+    <Variable>
+      <Name>MAIL_ENCRYPTION</Name>
+    </Variable>
+    <Variable>
+      <Name>MAIL_HOST</Name>
+    </Variable>
+    <Variable>
+      <Name>MAIL_USERNAME</Name>
+    </Variable>
+    <Variable>
+      <Name>MAIL_FROM_ADDRESS</Name>
+    </Variable>
+    <Variable>
+      <Name>MAIL_FROM_NAME</Name>
+    </Variable>
+    <Variable>
+      <Name>MAIL_PASSWORD</Name>
+    </Variable>
+    <Variable>
+      <Name>PHANTOMJS_SECRET</Name>
+    </Variable>
+    <Variable>
+      <Name>PHANTOMJS_BIN_PATH</Name>
+    </Variable>
+    <Variable>
+      <Name>API_SECRET</Name>
+    </Variable>
+    <Variable>
+      <Name>GOOGLE_MAPS_ENABLED</Name>
+    </Variable>
+    <Variable>
+      <Name>GOOGLE_MAPS_API_KEY</Name>
+    </Variable>
+    <Variable>
+      <Name>QUEUE_DRIVER</Name>
+    </Variable>
+  </Environment>
+  <Config Name="APP_ENV" Target="APP_ENV" Default="production" Description="Container Variable: APP_ENV" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Debug Mode" Target="APP_DEBUG" Default="0" Description="Container Variable: APP_DEBUG" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Database Type" Target="DB_TYPE" Default="mysql" Description="Container Variable: DB_TYPE" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="DB_STRICT" Target="DB_STRICT" Default="false" Description="Container Variable: DB_STRICT" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database Host" Target="DB_HOST" Default="unraidIP:port" Description="Container Variable: DB_HOST" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database Name" Target="DB_DATABASE" Default="ninja" Description="Container Variable: DB_DATABASE" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database username" Target="DB_USERNAME" Default="ninja" Description="Container Variable: DB_USERNAME" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database Password" Target="DB_PASSWORD" Default="ninja" Description="Container Variable: DB_PASSWORD" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="APP_URL" Target="APP_URL" Default="https://invoice.domain.com" Description="Container Variable: APP_URL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="APP_KEY" Target="APP_KEY" Default="SomeRandom32CharacterLongAlphanumericString" Description="Container Variable: APP_KEY" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MAIL_DRIVER" Target="MAIL_DRIVER" Default="smtp" Description="Container Variable: MAIL_DRIVER" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MAIL_PORT" Target="MAIL_PORT" Default="587" Description="Container Variable: MAIL_PORT" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MAIL_ENCRYPTION" Target="MAIL_ENCRYPTION" Default="tls" Description="Container Variable: MAIL_ENCRYPTION" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MAIL_HOST" Target="MAIL_HOST" Default="smtp.example.com" Description="Container Variable: MAIL_HOST" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MAIL_USERNAME" Target="MAIL_USERNAME" Default="johndoe@example.com" Description="Container Variable: MAIL_USERNAME" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MAIL_FROM_ADDRESS" Target="MAIL_FROM_ADDRESS" Default="invoice@example.com" Description="Container Variable: MAIL_FROM_ADDRESS" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MAIL_FROM_NAME" Target="MAIL_FROM_NAME" Default="Invoice Department" Description="Container Variable: MAIL_FROM_NAME" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MAIL_PASSWORD" Target="MAIL_PASSWORD" Default="SUPERSECRETEMAILPASSWORD" Description="Container Variable: MAIL_PASSWORD" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="HTTP Port" Target="80" Default="8000" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="HTTPS Port" Target="443" Default="8443" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="PHANTOMJS_SECRET" Target="PHANTOMJS_SECRET" Default="" Description="Container Variable: PHANTOMJS_SECRET" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="PHANTOMJS_BIN_PATH" Target="PHANTOMJS_BIN_PATH" Default="/usr/local/bin/phantomjs" Description="Container Variable: PHANTOMJS_BIN_PATH" Type="Variable" Display="always" Required="false" Mask="true"/>
+	<Config Name="API_SECRET" Target="API_SECRET" Default="RandomStuffHere" Description="Container Variable: API_SECRET" Type="Variable" Display="always" Required="false" Mask="true"/>
+	<Config Name="GOOGLE_MAPS_ENABLED" Target="GOOGLE_MAPS_ENABLED" Default="false" Description="Container Variable: GOOGLE_MAPS_ENABLED" Type="Variable" Display="always" Required="false" Mask="true"/>
+	<Config Name="GOOGLE_MAPS_API_KEY" Target="GOOGLE_MAPS_API_KEY" Default="" Description="Container Variable: GOOGLE_MAPS_API_KEY" Type="Variable" Display="always" Required="false" Mask="true"/>
+	<Config Name="QUEUE_DRIVER" Target="QUEUE_DRIVER" Default="database" Description="Container Variable: QUEUE_DRIVER" Type="Variable" Display="always" Required="false" Mask="true"/>
+	<Config Name="Storage" Target="/var/www/app/storage" Default="/mnt/user/appdata/invoiceninja/storage" Mode="rw" Description="Container Path: /var/www/app/storage" Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Logo" Target="/var/www/app/public/logo" Default="/mnt/user/appdata/invoiceninja/logo" Mode="rw" Description="Container Path: /var/www/app/public/logo" Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name=".env" Target="/var/www/app/.env" Default="/mnt/user/appdata/invoiceninja/config/.env" Mode="rw" Description="Container Path: /var/www/app/.env" Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Hosts File" Target="/etc/hosts" Default="/mnt/user/appdata/invoiceninja/etc/hosts" Mode="rw" Description="Container Path: /etc/hosts" Type="Path" Display="advanced" Required="false" Mask="false"/>
+	
+</Container>
